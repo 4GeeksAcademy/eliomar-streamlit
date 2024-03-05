@@ -30,13 +30,10 @@ def main():
     movie_list = total_data["title"].to_list()
     input_movie = st.sidebar.selectbox("Indica tu pelicula", movie_list)
     recommendations = recommend(input_movie)
-    print("Film recommendations '{}'".format(input_movie))
-    for movie, distance in recommendations:
-        print("- Film: {}".format(movie))
 
     button = st.sidebar.button("Mostrar")
 
-    st.subheader("Recomendaciones")
+    st.subheader("Tus recomendaciones aqui:")
 
     if button:
         st.subheader(input_movie)
